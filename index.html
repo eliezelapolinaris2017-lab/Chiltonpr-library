@@ -3,96 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chilton Library Demo Access</title>
+  <title>Chilton Library Premium Demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-overlay"></div>
+  <div class="page-bg"></div>
 
-  <main class="page-shell">
-    <section class="hero-panel">
-      <div class="brand-row">
-        <img
-          src="assets/chilton-logo.png"
-          alt="Chilton Library"
-          class="brand-logo"
-        />
-        <div class="brand-copy">
-          <span class="eyebrow">Automotive Repair Information</span>
-          <h1>Portal de acceso técnico</h1>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/chilton-logo.png" alt="Chilton Library" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-kicker">Premium Demo</span>
+        <strong>Technical Vehicle Portal</strong>
+      </div>
+    </div>
+
+    <button class="menu-btn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">Automotive Service Intelligence</span>
+          <h1>Find your vehicle. Access data fast.</h1>
           <p>
-            Demo visual inspirada en una biblioteca técnica automotriz.
-            Diseñada para pruebas de repositorio en GitHub Pages.
+            Experiencia visual premium inspirada en una biblioteca técnica
+            automotriz. Optimizada para GitHub Pages y pruebas de repositorio.
           </p>
         </div>
-      </div>
 
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Diagramas y manuales</h3>
-          <p>Interfaz conceptual para búsqueda de procedimientos, reparación y mantenimiento.</p>
-        </article>
+        <div class="finder-card">
+          <h2>Find Your Vehicle</h2>
 
-        <article class="feature-card">
-          <h3>Acceso rápido</h3>
-          <p>Ingreso con código demo y redirección al portal de referencia configurado.</p>
-        </article>
+          <div class="field-group">
+            <label for="year">Year</label>
+            <select id="year">
+              <option value="">Select Year</option>
+            </select>
+          </div>
 
-        <article class="feature-card">
-          <h3>UI tipo biblioteca</h3>
-          <p>Diseño corporativo, limpio y serio. Cero circo, puro enfoque funcional.</p>
-        </article>
+          <div class="field-group">
+            <label for="make">Make</label>
+            <select id="make">
+              <option value="">Select Make</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="model">Model</label>
+            <select id="model">
+              <option value="">Select Model</option>
+            </select>
+          </div>
+
+          <div class="action-row">
+            <select id="recent" class="recent-select">
+              <option>Recent</option>
+              <option>Last Search</option>
+              <option>Saved Demo</option>
+            </select>
+
+            <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+            <button id="selectBtn" class="btn btn-primary" type="button">Select</button>
+          </div>
+
+          <div id="vehicleMessage" class="vehicle-message"></div>
+        </div>
       </div>
     </section>
 
-    <section class="login-panel">
-      <div class="login-card">
-        <span class="status-badge">Demo Access</span>
-        <h2>Ingresar al sistema</h2>
-        <p class="login-text">
-          Usa el código de acceso asignado para simular la entrada al portal.
-        </p>
-
-        <form id="accessForm" class="access-form">
-          <label for="accessCode">Código de acceso</label>
-          <input
-            type="text"
-            id="accessCode"
-            name="accessCode"
-            inputmode="numeric"
-            autocomplete="off"
-            value="100003000"
-            maxlength="12"
-            placeholder="Ingrese el código"
-          />
-
-          <button type="submit" class="primary-btn">Abrir portal</button>
-        </form>
-
-        <div id="messageBox" class="message-box" aria-live="polite"></div>
-
-        <div class="portal-box">
-          <span class="portal-label">Destino configurado</span>
-          <a
-            href="https://ohioweblibrary.org/db/chilton"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="portal-link"
-          >
-            ohioweblibrary.org/db/chilton
-          </a>
+    <section class="content-grid">
+      <article class="info-panel">
+        <div class="section-head">
+          <span class="section-tag">Platform Overview</span>
+          <h3>
+            Get the detailed information you need to tackle vehicle maintenance and repairs.
+          </h3>
         </div>
 
-        <div class="small-note">
-          Esta es una landing page de demostración para fines visuales y de práctica.
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">01</div>
+            <div>
+              <h4>Maintenance & specs</h4>
+              <p>Tablas y datos técnicos para inspección, capacidad, fluidos y procedimientos clave.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">02</div>
+            <div>
+              <h4>Repair procedures</h4>
+              <p>Procesos paso a paso para reparación, servicio y estimación de mano de obra.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">03</div>
+            <div>
+              <h4>Vacuum & wiring diagrams</h4>
+              <p>Diagramas para troubleshooting, lectura de sistemas y operación general.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <aside class="access-panel">
+        <div class="access-card">
+          <span class="access-badge">Demo Access Code</span>
+          <h3>Secure Entry</h3>
+          <p>
+            Usa el código de prueba para simular acceso premium al portal de referencia.
+          </p>
+
+          <form id="accessForm" class="access-form">
+            <label for="accessCode">Access code</label>
+            <input
+              id="accessCode"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="12"
+              value="100003000"
+              placeholder="Enter access code"
+            />
+
+            <button class="btn btn-primary full" type="submit">Open Portal</button>
+          </form>
+
+          <div id="accessMessage" class="access-message"></div>
+
+          <div class="portal-destination">
+            <span>Configured destination</span>
+            <a href="https://ohioweblibrary.org/db/chilton" target="_blank" rel="noopener noreferrer">
+              ohioweblibrary.org/db/chilton
+            </a>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <span class="dot"></span>
+            <span>System status</span>
+          </div>
+          <strong>Ready for demo deployment</strong>
+          <p>GitHub Pages friendly. Lightweight. Clean. Sin hacer papelones.</p>
+        </div>
+      </aside>
     </section>
   </main>
 
