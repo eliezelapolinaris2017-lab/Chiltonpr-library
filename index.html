@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chilton Library Demo Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <main class="page-shell">
+    <section class="hero-panel">
+      <div class="brand-row">
+        <img
+          src="assets/chilton-logo.png"
+          alt="Chilton Library"
+          class="brand-logo"
+        />
+        <div class="brand-copy">
+          <span class="eyebrow">Automotive Repair Information</span>
+          <h1>Portal de acceso técnico</h1>
+          <p>
+            Demo visual inspirada en una biblioteca técnica automotriz.
+            Diseñada para pruebas de repositorio en GitHub Pages.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Diagramas y manuales</h3>
+          <p>Interfaz conceptual para búsqueda de procedimientos, reparación y mantenimiento.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Acceso rápido</h3>
+          <p>Ingreso con código demo y redirección al portal de referencia configurado.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>UI tipo biblioteca</h3>
+          <p>Diseño corporativo, limpio y serio. Cero circo, puro enfoque funcional.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <span class="status-badge">Demo Access</span>
+        <h2>Ingresar al sistema</h2>
+        <p class="login-text">
+          Usa el código de acceso asignado para simular la entrada al portal.
+        </p>
+
+        <form id="accessForm" class="access-form">
+          <label for="accessCode">Código de acceso</label>
+          <input
+            type="text"
+            id="accessCode"
+            name="accessCode"
+            inputmode="numeric"
+            autocomplete="off"
+            value="100003000"
+            maxlength="12"
+            placeholder="Ingrese el código"
+          />
+
+          <button type="submit" class="primary-btn">Abrir portal</button>
+        </form>
+
+        <div id="messageBox" class="message-box" aria-live="polite"></div>
+
+        <div class="portal-box">
+          <span class="portal-label">Destino configurado</span>
+          <a
+            href="https://ohioweblibrary.org/db/chilton"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portal-link"
+          >
+            ohioweblibrary.org/db/chilton
+          </a>
+        </div>
+
+        <div class="small-note">
+          Esta es una landing page de demostración para fines visuales y de práctica.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
