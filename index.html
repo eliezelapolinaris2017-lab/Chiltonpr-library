@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chilton Library Premium Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/chilton-logo.png" alt="Chilton Library" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-kicker">Premium Access</span>
+        <strong>Technical Vehicle Portal</strong>
+      </div>
+    </div>
+
+    <button class="menu-btn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">Automotive Service Intelligence</span>
+          <h1>Find your vehicle. Access data fast.</h1>
+          <p>
+            Plataforma visual premium inspirada en una biblioteca técnica
+            automotriz, optimizada para una experiencia moderna y responsiva.
+          </p>
+        </div>
+
+        <div class="finder-card">
+          <h2>Find Your Vehicle</h2>
+
+          <div class="field-group">
+            <label for="year">Year</label>
+            <select id="year">
+              <option value="">Select Year</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="make">Make</label>
+            <select id="make">
+              <option value="">Select Make</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="model">Model</label>
+            <select id="model">
+              <option value="">Select Model</option>
+            </select>
+          </div>
+
+          <div class="action-row">
+            <select id="recent" class="recent-select">
+              <option>Recent</option>
+              <option>Last Search</option>
+              <option>Saved Vehicle</option>
+            </select>
+
+            <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+            <button id="selectBtn" class="btn btn-primary" type="button">Select</button>
+          </div>
+
+          <div id="vehicleMessage" class="vehicle-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <article class="info-panel">
+        <div class="section-head">
+          <span class="section-tag">Platform Overview</span>
+          <h3>
+            Get the detailed information you need to tackle vehicle maintenance and repairs.
+          </h3>
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">01</div>
+            <div>
+              <h4>Maintenance & specs</h4>
+              <p>Tablas y datos técnicos para inspección, capacidad, fluidos y procedimientos clave.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">02</div>
+            <div>
+              <h4>Repair procedures</h4>
+              <p>Procesos paso a paso para reparación, servicio y estimación de mano de obra.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">03</div>
+            <div>
+              <h4>Vacuum & wiring diagrams</h4>
+              <p>Diagramas para troubleshooting, lectura de sistemas y operación general.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="access-panel">
+        <div class="access-card">
+          <span class="access-badge">Secure Access</span>
+          <h3>Portal Entry</h3>
+          <p>
+            Ingrese el código de acceso para continuar al portal técnico.
+          </p>
+
+          <form id="accessForm" class="access-form">
+            <label for="accessCode">Access code</label>
+            <input
+              id="accessCode"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="12"
+              value="100003000"
+              placeholder="Enter access code"
+            />
+
+            <button class="btn btn-primary full" type="submit">Open Portal</button>
+          </form>
+
+          <div id="accessMessage" class="access-message"></div>
+
+          <div class="portal-destination">
+            <span>Portal destination</span>
+            <a href="https://app-chiltonlibrary-com.oh0117.oplin.org/home?id_token=eyJraWQiOiIxMTM1ODk5NDcyNTM4OTQ0MDY3NzczNDg4OTczNDM3ODYyMTAyNjQiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJDaGlsdG9uTGlicmFyeS5jb20iLCJhdWQiOiJHYWxlIiwic3ViIjoibGViYW5vbnB1YiIsImlhdCI6MTc3Mjg0MTU5OCwiZXhwIjoxNzcyODQ1MTk4LCJ2ZXIiOiIyIiwibG9jYXRpb25faWQiOiJsZWJhbm9ucHViIiwibG9jYXRpb25fdGl0bGUiOiJMZWJhbm9uIFB1YmxpYyBMaWJyYXJ5IiwiaW5zdGl0dXRpb25faWQiOiJvcGxpbiIsImluc3RpdHV0aW9uX3RpdGxlIjoiIiwiY291bnRyeSI6IlVTIiwicmVnaW9uIjoiIiwiYXV0aF90eXBlIjoiaXAiLCJjbGllbnRfaXAiOiI2Ni4yMTMuNDEuMTE3IiwidWEiOiI1Mjk1Mzg1OCIsImxhbmdfaWQiOiIxIiwibGF1bmNoX2RvbWFpbiI6ImdhbGUuY29tIiwiYXV0aF9zZXJ2ZXIiOiJodHRwczovL2luZm90cmFjLmdhbGUuY29tL2dhbGVuZXQvbGViYW5vbnB1YiIsIm1lbnVfc2VydmVyIjoiaHR0cHM6Ly9saW5rLmdhbGUuY29tL2FwcHMvbWVudT91c2VyR3JvdXBOYW1lPWxlYmFub25wdWIiLCJzZXNzaW9uX2lkIjoiMTc3Mjg0MDkwODk0OWxlYmFub25wdWIiLCJ1aV9wcmVmZXJlbmNlIjoiZ2FsZW5ldCIsImRlcml2ZWRfYnVzaW5lc3NfdW5pdCI6WyJTY2hvb2wiXSwicHJvZHVjdF9pZCI6IkNITEwiLCJleHBpcmF0aW9uIjoiMjAyNjAzMDcyMzQ4MjggR01UIiwibGljZW5zZV9saW1pdCI6LTEsImJyYW5kaW5nX3NjcmlwdCI6Imh0dHBzOi8vYXNzZXRzLmNlbmdhZ2UuY29tL2dhbGUvYnJhbmRpbmcvY29uc29ydGlhL29wbGluLmpzIiwiYnJhbmRpbmdfdGV4dCI6IiAiLCJjb29raWVfY29uc2VudCI6InRydWUiLCJhbmFseXRpY3Nfb3B0b3V0IjoiZmFsc2UiLCJzY29wZSI6InJlYWQifQ.MkZpdIGw-3Tnz_sKguumyilQDEBjsxqX_FHdV_OBuTR145t-k5Ieeef5G3Kp2dzIZis3E4MY0vSq9sBqHM3QuOYz-jORshLHcXqRRmW_Gp3x_bduAQF1nCaIMf-IdftN_xBm9TmWkxYk4sMtW_Wqs6dkri0ZI2ilY6WmMpVhPw6dogAYLiBlbnKxjJQzAXl24gEIlKJ9vu3lgeCwjGElRhbTo16EuLllFOsIB4tRZgxZC4fz7pY_hqBBildXeU9n0TpM_lUcbvaOhqxKqvcNhDiYkwa8moNxNovtKNNNjfRmuNexkxlKoSpEwPORuiZd9y040VkjoXzIzK2ezrSnRw" target="_blank" rel="noopener noreferrer">
+              app-chiltonlibrary-com.
+            </a>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <span class="dot"></span>
+            <span>System status</span>
+          </div>
+          <strong>Portal online</strong>
+          <p>Responsive interface, streamlined access flow and premium presentation layer.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
